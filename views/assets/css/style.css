@@ -202,16 +202,24 @@ h3{
     height: 70px;
 }
 section{
-      display: flex;
-    justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  margin: 20px;
+    display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+  
+margin-left: 100px;
+
+
 }
 /* .container-vetements img{
     width: 300px;
     height: 300px;
 } */
+.container-vetements{
+    width: 500px;
+}
+.container-vetements h4{
+    width: 300px;
+}
 
 .sect2{
     display: flex;
@@ -241,4 +249,11 @@ section{
 }
 .invisible{
     width: 500px;
+    height: 30px;
+}
+.voir_detail{
+    margin-top: 20px;
+    font-weight: bold;
+    color: rgb(59, 21, 94);
+    padding: 5px;
 }

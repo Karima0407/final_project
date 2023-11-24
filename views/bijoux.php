@@ -1,7 +1,7 @@
 <?php
 include_once "./inc/nav.php";
-require_once "../model/maquillageModel.php";
-$listMakeup = Maquillage::listMaquillage();
+require_once "../model/bijouxModel.php";
+$listBijoux = Bijoux::listBijoux();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,17 +22,18 @@ $listMakeup = Maquillage::listMaquillage();
 
 </head>
 
-<h1 class="titre_page">Vous trouverez un large choix de Make Up pour une beauté impréssionnante !</h1>
+<h1 class="titre_page">Une large gamme de bijoux pour une beauté incontournable </h1>
 <section>
 
 
-    <?php foreach ($listMakeup as $makeup) { ?>
+    <?php foreach ($listBijoux as $bijoux) { ?>
 
         <div class="container-vetements">
             <div class="invisible"></div>
-            <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
+            <div><img src="./assets/img/<?= $bijoux['imageBijoux']; ?>" alt="" width="300" height="300"></div>
 
-            <h4><?= $makeup['description']; ?></h4>
+            <h4><?= $bijoux['description']; ?></h4>
+
 
             <div>
                 <a href="">Ajouter au Panier</a>
@@ -40,6 +41,7 @@ $listMakeup = Maquillage::listMaquillage();
             </div>
 
             <button class="voir_detail">Voir Plus de détails sur ce produit</button>
+
 
 
 

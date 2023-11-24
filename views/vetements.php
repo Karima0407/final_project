@@ -19,6 +19,7 @@ $listVetements = Vetement::listVetement();
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 <!--<div class="container-vetements"> #}
   <h1>Chez Nous vous trouvez un large choix de vetements pour un look exellent et attirant! </h1>
@@ -239,16 +240,17 @@ $listVetements = Vetement::listVetement();
   <?php foreach ($listVetements as $vetement) { ?>
 
     <div class="container-vetements">
-
-      <div><img src="./assets/img/<?= $vetement['image']; ?>" alt="" width="300" height="300"></div>
       <div class="invisible"></div>
+      <div><img src="./assets/img/<?= $vetement['image']; ?>" alt="" width="300" height="300"></div>
+
       <h4><?= $vetement['description']; ?></h4>
+
       <div>
         <a href="">Ajouter au Panier</a>
         <i class="fa-solid fa-cart-shopping"></i>
       </div>
 
-      <button>Voir Plus de détails sur ce produit</button>
+      <button class="voir_detail">Voir Plus de détails sur ce produit</button>
 
 
 

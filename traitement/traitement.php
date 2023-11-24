@@ -2,6 +2,7 @@
 
 require_once "../model/userModel.php";
 require_once "../model/vetementModel.php";
+require_once "../model/maquillageModel.php";
 
 
 
@@ -53,8 +54,54 @@ $request = $db->prepare('INSERT INTO vetements (image ,description) VALUES (?,?)
 try {
 $request->execute(array($imgName, $description_produit));
 // redirction vers list_room.php
-} catch (PDOException $e) {
-echo $e->getMessage();
+    } catch (PDOException $e) {
+    echo $e->getMessage();
+    }
 }
 }
+
+if (isset($_POST['ajout-maquillage'])) {
+    $description_maquillage = htmlspecialchars($_POST['description-maquillage']);
+
+
+    $imgName = $_FILES['img_makeup']['name'];
+    $tmpName = $_FILES['img_makeup']['tmp_name'];
+    $destination = $_SERVER["DOCUMENT_ROOT"] . '/final_project/views/assets/img/' . $imgName;
+
+    if (move_uploaded_file($tmpName, $destination)) {
+        // se connecter à la base de donnes
+        $db = Database::dbConnect();
+        //preparer la requete
+        $request = $db->prepare('INSERT INTO maquillage (imageMakeup ,description) VALUES (?,?)');
+        //exzcuter la requete
+        try {
+            $request->execute(array($imgName, $description_maquillage));
+            // redirction vers list_room.php
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+}
+
+if (isset($_POST['ajout-bijoux'])) {
+    $description_bijoux = htmlspecialchars($_POST['description-bijoux']);
+
+
+    $imgName = $_FILES['img_bijoux']['name'];
+    $tmpName = $_FILES['img_bijoux']['tmp_name'];
+    $destination = $_SERVER["DOCUMENT_ROOT"] . '/final_project/views/assets/img/' . $imgName;
+
+    if (move_uploaded_file($tmpName, $destination)) {
+        // se connecter à la base de donnes
+        $db = Database::dbConnect();
+        //preparer la requete
+        $request = $db->prepare('INSERT INTO bijoux (imageBijoux ,description) VALUES (?,?)');
+        //exzcuter la requete
+        try {
+            $request->execute(array($imgName, $description_bijoux));
+            // redirction vers list_room.php
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
 }

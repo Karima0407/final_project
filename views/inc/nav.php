@@ -28,8 +28,8 @@
 
         <div class="barre">
             <div class="icone">
-                <a class="seConnecter" href="../views/login.php">Se Connecter</a>
-                <a class="inscription" href="../views/inscription.php">Inscription</a>
+                <a class="seConnecter" href="">Se Connecter</a>
+                <a class="inscription" href="">Inscription</a>
                 <i class="fa-solid fa-user"></i>
             </div>
 

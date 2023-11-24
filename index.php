@@ -23,9 +23,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/final_project/views/inc/nav.php';
         <li><a href="./views/vetements.php">Vetements</a></li>
         <div><img src="./views/assets/img/20200341-magnifique-robe-femme-logo-facile-creatif-pour-boutique-mode-magasin-logo-vecteur-gratuit-vectoriel.jpg" alt=""></div>
 
-        <li><a href="./maquillage.php">Maquillage</a></li>
+        <li><a href="./views/maquillage.php">Maquillage</a></li>
         <div><img src="./views/assets/img/logo-mode-maquillage-illustration-du-lettrage-phrase-calligraphie_90395-260.avif" alt=""></div>
-        <li><a href="">Bijoux</a></li>
+        <li><a href="./views/bijoux.php">Bijoux</a></li>
         <div><img src="./views/assets/img/diamond-ring-icon-logo-template-illustration-design-vector.jpg" alt=""></div>
         <li><a href="">Montres</a></li>
         <div><img src="./views/assets/img/5569517-montre-bracelet-horloge-temps-icone-solide-illustrationle-modele-de-logo-adapte-a-de-nombreux-usages-gratuit-vectoriel.jpg" alt=""></div>
