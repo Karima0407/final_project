@@ -1,3 +1,8 @@
+body{
+    background-color: linear-gradient(pink,purple,green);
+}
+
+
 header{
     display: flex;
     background-color: rgb(255, 216, 223);
@@ -114,7 +119,7 @@ h3{
     margin-left: 20px;
 }
 .selection{
-    display: flex;
+    /* display: flex; */
     justify-content: space-around;
 }
 .clothes h2{
@@ -145,6 +150,9 @@ h3{
     justify-content: space-around   ;
     align-items: center;
     
+}
+.promo-bijoux h4{
+    width: 400px;
 }
 .coffre1 img{
     width: 350px;
@@ -256,4 +264,22 @@ margin-left: 100px;
     font-weight: bold;
     color: rgb(59, 21, 94);
     padding: 5px;
+}
+.listeMaquillage{
+    display: flex;
+   justify-content: space-around;
+
+}
+.montresAcceuil {
+    border: 3px solid purple;
+    border-radius: 15px;
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+   
+}
+.montresAcceuil img{
+   width: 400px;
+   height: 400px;
 }

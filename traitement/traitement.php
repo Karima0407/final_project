@@ -105,3 +105,26 @@ if (isset($_POST['ajout-bijoux'])) {
         }
     }
 }
+
+if (isset($_POST['ajout-montre'])) {
+    $description_montres = htmlspecialchars($_POST['description-montres']);
+
+
+    $imgName = $_FILES['img_montres']['name'];
+    $tmpName = $_FILES['img_montres']['tmp_name'];
+    $destination = $_SERVER["DOCUMENT_ROOT"] . '/final_project/views/assets/img/' . $imgName;
+
+    if (move_uploaded_file($tmpName, $destination)) {
+        // se connecter à la base de donnes
+        $db = Database::dbConnect();
+        //preparer la requete
+        $request = $db->prepare('INSERT INTO montres (imageMontres ,description) VALUES (?,?)');
+        //exzcuter la requete
+        try {
+            $request->execute(array($imgName, $description_montres));
+            // redirction vers list_room.php
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+}
