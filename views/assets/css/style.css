@@ -1,6 +1,4 @@
-body{
-    background-color: linear-gradient(pink,purple,green);
-}
+
 
 
 header{
@@ -92,6 +90,7 @@ li a{
     font-size: 25px;
 
 }
+
 .maquillage img{
     width: 254px;
     height: 170px;
@@ -117,6 +116,10 @@ h3{
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
+    color: crimson;
+     font-family: 'Dancing Script', cursive;
+     font-weight: bold;
+font-size: 40px;
 }
 .selection{
     /* display: flex; */
@@ -151,8 +154,13 @@ h3{
     align-items: center;
     
 }
+.promo-bijoux h2{
+    margin-top: 20px;
+}
 .promo-bijoux h4{
     width: 400px;
+    text-align: center;
+    margin-top: 20px;
 }
 .coffre1 img{
     width: 350px;
@@ -173,6 +181,9 @@ h3{
     height: 35px;
     color: white;
     padding: 5px;
+    text-align: center;
+    font-weight: bold;
+
 }
 .promo2{
     position: absolute;
@@ -183,6 +194,8 @@ h3{
     color: white;
     padding: 5px;
     background-color: darkmagenta;
+    text-align: center;
+    font-weight: bold;
 }
 .paragraphe{
     margin-top: 30px;
@@ -270,6 +283,10 @@ margin-left: 100px;
    justify-content: space-around;
 
 }
+.listeMaquillage h4{
+    font-weight: bold;
+  
+}
 .montresAcceuil {
     border: 3px solid purple;
     border-radius: 15px;
@@ -282,4 +299,13 @@ margin-left: 100px;
 .montresAcceuil img{
    width: 400px;
    height: 400px;
+}
+.images_panier img{
+    width: 400px;
+    height: 400px;
+}
+.liste_panier{
+    display: flex;
+ flex-wrap: wrap;
+  width: 300px;
 }

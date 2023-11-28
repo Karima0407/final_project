@@ -28,13 +28,13 @@
 
         <div class="barre">
             <div class="icone">
-                <a class="seConnecter" href="">Se Connecter</a>
+                <a class="seConnecter" href="http://localhost/final_project/views/login.php">Se Connecter</a>
                 <a class="inscription" href="">Inscription</a>
                 <i class="fa-solid fa-user"></i>
             </div>
 
             <div class="icone">
-                <a href="">Panier</a>
+                <a href="http://localhost/final_project/views/affichage_panier.php">Panier</a>
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
 

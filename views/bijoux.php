@@ -30,15 +30,21 @@ $listBijoux = Bijoux::listBijoux();
 
         <div class="container-vetements">
             <div class="invisible"></div>
-            <div><img src="./assets/img/<?= $bijoux['imageBijoux']; ?>" alt="" width="300" height="300"></div>
+            <form action="./panier.php" method="post">
+                <input type="hidden" name="product_id" value="<?= $bijoux['id_bijoux']; ?>">
+                <input type="hidden" name="product_img" value="<?= $bijoux['imageBijoux']; ?>">
+                <input type="hidden" name="product_description" value="<?= $bijoux['description']; ?>">
+                <div><img src="./assets/img/<?= $bijoux['imageBijoux']; ?>" alt="" width="300" height="300"></div>
 
-            <h4><?= $bijoux['description']; ?></h4>
+                <h4><?= $bijoux['description']; ?></h4>
 
 
-            <div>
-                <a href="">Ajouter au Panier</a>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
+                <div>
+                    <button type="submit" name="add_to_cart">Ajouter au Panier</button>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </form>
+
 
             <button class="voir_detail">Voir Plus de détails sur ce produit</button>
 

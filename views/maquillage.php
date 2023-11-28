@@ -30,14 +30,21 @@ $listMakeup = Maquillage::listMaquillage();
 
         <div class="container-vetements">
             <div class="invisible"></div>
-            <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
+            <form action="./panier.php" method="post">
+                <input type="hidden" name="product_id" value="<?= $makeup['id_maquillage']; ?>">
+                <input type="hidden" name="product_img" value="<?= $makeup['imageMakeup']; ?>">
+                <input type="hidden" name="product_description" value="<?= $makeup['description']; ?>">
 
-            <h4><?= $makeup['description']; ?></h4>
+                <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
 
-            <div>
-                <a href="">Ajouter au Panier</a>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
+                <h4><?= $makeup['description']; ?></h4>
+
+                <div>
+                    <button type="submit" name="add_to_cart">Ajouter au Panier</button>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </form>
+
 
             <button class="voir_detail">Voir Plus de détails sur ce produit</button>
 

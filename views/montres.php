@@ -23,32 +23,40 @@ $listMontres = Montres::listMontres();
 </head>
 
 
-    <h1 class="titre_page">Des Montres Raffinées et Luxes spécialements pour Vous !</h1>
-    <section>
+<h1 class="titre_page">Des Montres Raffinées et Luxes spécialements pour Vous !</h1>
+<section>
 
 
-        <?php foreach ($listMontres as $montre) { ?>
+    <?php foreach ($listMontres as $montre) { ?>
 
-            <div class="container-vetements">
-                <div class="invisible"></div>
+        <div class="container-vetements">
+            <div class="invisible"></div>
+            <form action="./panier.php" method="post">
+                <input type="hidden" name="product_id" value="<?= $montre['id_montre']; ?>">
+                <input type="hidden" name="product_img" value="<?= $montre['imageMontres']; ?>">
+                <input type="hidden" name="product_description" value="<?= $montre['description']; ?>">
+
                 <div><img src="./assets/img/<?= $montre['imageMontres']; ?>" alt="" width="300" height="300"></div>
 
                 <h4><?= $montre['description']; ?></h4>
 
                 <div>
-                    <a href="">Ajouter au Panier</a>
+                    <button type="submit" name="add_to_cart">Ajouter au Panier</button>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
 
-                <button class="voir_detail">Voir Plus de détails sur ce produit</button>
+            </form>
+
+
+            <button class="voir_detail">Voir Plus de détails sur ce produit</button>
 
 
 
 
-            </div>
+        </div>
 
 
 
 
-        <?php } ?>
-    </section>
+    <?php } ?>
+</section>
