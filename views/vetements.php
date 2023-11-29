@@ -249,6 +249,7 @@ $listVetements = Vetement::listVetement();
         <div><img src="./assets/img/<?= $vetement['image']; ?>" name="product_img" alt="" width="300" height="300"></div>
 
         <h4><?= $vetement['description']; ?></h4>
+   
 
         <div>
           <button type="submit" name="add_to_cart">Ajouter au Panier</button>
@@ -256,7 +257,7 @@ $listVetements = Vetement::listVetement();
         </div>
       </form>
 
-      <button class="voir_detail">Voir Plus de détails sur ce produit</button>
+      <a href="details.php?id=<?= $vetement['id_vetement']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
     </div>
   <?php } ?>
 </section>

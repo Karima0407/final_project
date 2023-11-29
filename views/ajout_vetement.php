@@ -10,9 +10,13 @@
 <body>
     <form action="../traitement/traitement.php" method="post" enctype="multipart/form-data">
         <label for="">Ajoutez l'image du produit</label>
-        <input type="file" name="img" id="">
+        <div> <input type="file" name="img" id=""></div>
         <label for="">Ajoutez une description</label>
-        <input type="text" name="description-produit" id="">
+        <div><input type="text" name="description-produit" id=""></div>
+        <label for="">Ajoutez une description détaillée du produit</label>
+        <div><textarea name="description-detaille" id="" cols="30" rows="10"></textarea></div>
+        <label for="">Ajoutez le prix</label>
+        <div><input type="number" name="prix" id=""></div>
         <button name="ajout-vetement">Ajoutez nouveau vetement</button>
 
     </form>

@@ -39,6 +39,10 @@ User::connexion($email, $password);
 
 if (isset($_POST['ajout-vetement'])) {
 $description_produit = htmlspecialchars($_POST['description-produit']);
+$description_detaille= htmlspecialchars($_POST['description-detaille']);
+$prix = htmlspecialchars($_POST['prix']);
+   
+    
 
 
 $imgName = $_FILES['img']['name'];
@@ -49,10 +53,10 @@ if (move_uploaded_file($tmpName, $destination)) {
 // se connecter à la base de donnes
 $db = Database::dbConnect();
 //preparer la requete
-$request = $db->prepare('INSERT INTO vetements (image ,description) VALUES (?,?)');
+$request = $db->prepare('INSERT INTO vetements (image ,description,descriptionDetaille,prix) VALUES (?,?,?,?)');
 //exzcuter la requete
 try {
-$request->execute(array($imgName, $description_produit));
+$request->execute(array($imgName, $description_produit, $description_detaille, $prix));
 // redirction vers list_room.php
     } catch (PDOException $e) {
     echo $e->getMessage();
