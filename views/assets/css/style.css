@@ -309,3 +309,30 @@ margin-left: 100px;
  flex-wrap: wrap;
   width: 300px;
 }
+.block_detail h3{
+    width: 1800px;
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+  
+}
+.block_detail h2{
+    color: blueviolet;
+    margin-left: 20px;
+    font-size: 30px;
+}
+.block_detail h4{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: darkred;
+
+}
+.block_detail img{
+ margin-left: 34%;
+}
+.couleur1{
+    color:rgb(166, 22, 166);
+   
+
+}
