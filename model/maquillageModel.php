@@ -41,4 +41,20 @@ class Maquillage
             echo $e->getMessage();
         }
     }
+
+    public static function getProductDetails($product_id)
+    {
+        $db = Database::dbConnect();
+        $request = $db->prepare("SELECT * FROM maquillage  WHERE id_maquillage = ?");
+
+        try {
+            $request->execute([$product_id]);
+            $productDetails = $request->fetch();
+
+            return $productDetails;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+        }
+    }
 }

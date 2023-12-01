@@ -29,6 +29,7 @@ class Vetement
         try {
             $request->execute([$product_id]);
             $productDetails = $request->fetch();
+            
             return $productDetails;
         } catch (PDOException $e) {
             echo $e->getMessage();

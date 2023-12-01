@@ -16,6 +16,7 @@ require_once "../model/vetementModel.php";
 
 
 
+// pour les details de vetements
 // Vérifier si l'ID du produit est présent dans l'URL
 
 if (isset($_GET['id'])) {
@@ -65,4 +66,6 @@ if (isset($_GET['id'])) {
 } else {
     echo 'Erreur : ID du produit manquant dans l\'URL.';
 }
+
+
 

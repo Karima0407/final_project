@@ -34,6 +34,7 @@ $listMakeup = Maquillage::listMaquillage();
                 <input type="hidden" name="product_id" value="<?= $makeup['id_maquillage']; ?>">
                 <input type="hidden" name="product_img" value="<?= $makeup['imageMakeup']; ?>">
                 <input type="hidden" name="product_description" value="<?= $makeup['description']; ?>">
+                <input type="hidden" name="product_prix" value="<?= $makeup['prix']; ?>">
 
                 <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
 
@@ -46,7 +47,7 @@ $listMakeup = Maquillage::listMaquillage();
             </form>
 
 
-            <button class="voir_detail">Voir Plus de détails sur ce produit</button>
+            <a href="details_maquillage.php?id=<?= $makeup['id_maquillage']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
 
 
 

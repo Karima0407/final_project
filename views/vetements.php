@@ -245,6 +245,7 @@ $listVetements = Vetement::listVetement();
         <input type="hidden" name="product_id" value="<?= $vetement['id_vetement']; ?>">
         <input type="hidden" name="product_img" value="<?= $vetement['image']; ?>">
         <input type="hidden" name="product_description" value="<?= $vetement['description']; ?>">
+        <input type="hidden" name="product_prix" value="<?= $vetement['prix']; ?>">
 
         <div><img src="./assets/img/<?= $vetement['image']; ?>" name="product_img" alt="" width="300" height="300"></div>
 
@@ -257,7 +258,7 @@ $listVetements = Vetement::listVetement();
         </div>
       </form>
 
-      <a href="details.php?id=<?= $vetement['id_vetement']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
+      <a href="details_vetement.php?id=<?= $vetement['id_vetement']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
     </div>
   <?php } ?>
 </section>
