@@ -19,43 +19,50 @@ $listMakeup = Maquillage::listMaquillage();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
 
-<h1 class="titre_page">Vous trouverez un large choix de Make Up pour une beauté impréssionnante !</h1>
-<section>
+<body>
+
+    <h1 class="titre_page">Vous trouverez un large choix de Make Up pour une beauté impréssionnante !</h1>
+    <div class="recherche">
+        <input type="text" id="searchInput" placeholder="Tapez votre produit">
+        <div id="searchResults"></div>
+    </div>
+    <section>
 
 
-    <?php foreach ($listMakeup as $makeup) { ?>
+        <?php foreach ($listMakeup as $makeup) { ?>
 
-        <div class="container-vetements">
-            <div class="invisible"></div>
-            <form action="./panier.php" method="post">
-                <input type="hidden" name="product_id" value="<?= $makeup['id_maquillage']; ?>">
-                <input type="hidden" name="product_img" value="<?= $makeup['imageMakeup']; ?>">
-                <input type="hidden" name="product_description" value="<?= $makeup['description']; ?>">
-                <input type="hidden" name="product_prix" value="<?= $makeup['prix']; ?>">
+            <div class="container-vetements">
+                <div class="invisible"></div>
+                <form action="./panier.php" method="post">
+                    <input type="hidden" name="product_id" value="<?= $makeup['id_maquillage']; ?>">
+                    <input type="hidden" name="product_img" value="<?= $makeup['imageMakeup']; ?>">
+                    <input type="hidden" name="product_description" value="<?= $makeup['description']; ?>">
+                    <input type="hidden" name="product_prix" value="<?= $makeup['prix']; ?>">
 
-                <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
+                    <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
 
-                <h4><?= $makeup['description']; ?></h4>
+                    <h4><?= $makeup['description']; ?></h4>
 
-                <div>
-                    <button type="submit" name="add_to_cart">Ajouter au Panier</button>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </form>
-
-
-            <a href="details_maquillage.php?id=<?= $makeup['id_maquillage']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
+                    <div>
+                        <button type="submit" name="add_to_cart">Ajouter au Panier</button>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </form>
 
 
-
-
-        </div>
+                <a href="details_maquillage.php?id=<?= $makeup['id_maquillage']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
 
 
 
 
-    <?php } ?>
-</section>
+            </div>
+
+
+
+
+        <?php } ?>
+    </section>
+    <script src="./assets/index.js"></script>
+</body>

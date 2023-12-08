@@ -23,6 +23,11 @@ $listBijoux = Bijoux::listBijoux();
 </head>
 
 <h1 class="titre_page">Une large gamme de bijoux pour une beauté incontournable </h1>
+
+<div class="recherche">
+    <input type="text" id="searchInput" placeholder="Tapez votre produit">
+    <div id="searchResults"></div>
+</div>
 <section>
 
 
@@ -34,6 +39,7 @@ $listBijoux = Bijoux::listBijoux();
                 <input type="hidden" name="product_id" value="<?= $bijoux['id_bijoux']; ?>">
                 <input type="hidden" name="product_img" value="<?= $bijoux['imageBijoux']; ?>">
                 <input type="hidden" name="product_description" value="<?= $bijoux['description']; ?>">
+                <input type="hidden" name="product_prix" value="<?= $bijoux['prix']; ?>">
                 <div><img src="./assets/img/<?= $bijoux['imageBijoux']; ?>" alt="" width="300" height="300"></div>
 
                 <h4><?= $bijoux['description']; ?></h4>
@@ -46,7 +52,7 @@ $listBijoux = Bijoux::listBijoux();
             </form>
 
 
-            <button class="voir_detail">Voir Plus de détails sur ce produit</button>
+            <a href="details_bijoux.php?id=<?= $bijoux['id_bijoux']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
 
 
 
@@ -59,3 +65,4 @@ $listBijoux = Bijoux::listBijoux();
 
     <?php } ?>
 </section>
+<script src="./assets/index.js"></script>

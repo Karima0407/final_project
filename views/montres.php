@@ -22,41 +22,49 @@ $listMontres = Montres::listMontres();
 
 </head>
 
+<body>
 
-<h1 class="titre_page">Des Montres Raffinées et Luxes spécialements pour Vous !</h1>
-<section>
-
-
-    <?php foreach ($listMontres as $montre) { ?>
-
-        <div class="container-vetements">
-            <div class="invisible"></div>
-            <form action="./panier.php" method="post">
-                <input type="hidden" name="product_id" value="<?= $montre['id_montre']; ?>">
-                <input type="hidden" name="product_img" value="<?= $montre['imageMontres']; ?>">
-                <input type="hidden" name="product_description" value="<?= $montre['description']; ?>">
-
-                <div><img src="./assets/img/<?= $montre['imageMontres']; ?>" alt="" width="300" height="300"></div>
-
-                <h4><?= $montre['description']; ?></h4>
-
-                <div>
-                    <button type="submit" name="add_to_cart">Ajouter au Panier</button>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-
-            </form>
+    <h1 class="titre_page">Des Montres Raffinées et Luxes spécialements pour Vous !</h1>
+    <div class="recherche">
+        <input type="text" id="searchInput" placeholder="Tapez votre produit">
+        <div id="searchResults"></div>
+    </div>
+    <section>
 
 
-            <button class="voir_detail">Voir Plus de détails sur ce produit</button>
+        <?php foreach ($listMontres as $montre) { ?>
+
+            <div class="container-vetements">
+                <div class="invisible"></div>
+                <form action="./panier.php" method="post">
+                    <input type="hidden" name="product_id" value="<?= $montre['id_montre']; ?>">
+                    <input type="hidden" name="product_img" value="<?= $montre['imageMontres']; ?>">
+                    <input type="hidden" name="product_description" value="<?= $montre['description']; ?>">
+                    <input type="hidden" name="product_prix" value="<?= $montre['prix']; ?>">
+
+                    <div><img src="./assets/img/<?= $montre['imageMontres']; ?>" alt="" width="300" height="300"></div>
+
+                    <h4><?= $montre['description']; ?></h4>
+
+                    <div>
+                        <button type="submit" name="add_to_cart">Ajouter au Panier</button>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
+                </form>
+
+
+                <button class="voir_detail">Voir Plus de détails sur ce produit</button>
 
 
 
 
-        </div>
+            </div>
 
 
 
 
-    <?php } ?>
-</section>
+        <?php } ?>
+    </section>
+    <script src="./assets/index.js"></script>
+</body>

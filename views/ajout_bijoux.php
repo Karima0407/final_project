@@ -13,7 +13,8 @@
         <div><input type="file" name="img_bijoux" id=""></div>
         <label for="">Ajoutez une description</label>
         <div><textarea name="description-bijoux" id="" cols="30" rows="10"></textarea></div>
-        <button name="ajout-bijoux">Ajoutez nouveau vetement</button>
+        <div><input type="number" name="prix" id=""></div>
+        <button name="ajout-bijoux">Ajoutez nouveau bijoux</button>
 
     </form>
 </body>

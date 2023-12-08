@@ -19,11 +19,13 @@
 <body>
     <header>
         <h1>World of Fashion</h1>
-        <div class="recherche">
-            <input type="text" name="" id="" placeholder="          tapez votre produit">
-            <a href=""> <i class="fa-solid fa-magnifying-glass"></i></a>
+        <!--<div class="recherche">
+            <input type="text" id="searchInput" placeholder="Tapez votre produit">
+            <div id="searchResults"></div>
+        </div>-->
 
-        </div>
+
+        <div id="searchResults"></div>
 
 
         <div class="barre">
@@ -34,7 +36,7 @@
             </div>
 
             <div class="icone">
-                <a href="http://localhost/final_project/views/affichage_panier.php">Panier</a>
+                <a id="panierLink" href="http://localhost/final_project/views/affichage_panier.php">Panier</a>
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
 
@@ -45,8 +47,7 @@
         </div>
 
     </header>
-
-
+    <script src="../assets/index.js"></script>
 </body>
 
 </html>

@@ -1,341 +1,346 @@
-
-
-
-header{
-    display: flex;
-    background-color: rgb(255, 216, 223);
-    width: 100%;
-    height: 150px;
-    justify-content: space-around;
-    
+header {
+  display: flex;
+  background-color: rgb(255, 216, 223);
+  width: 100%;
+  height: 150px;
+  justify-content: space-around;
 }
 
-.recherche{
-   position: relative;
-   margin-top: 20px;
+.recherche {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
-h1{
-    margin-top: 20px;
+h1 {
+  margin-top: 20px;
 }
- a>i{
-    position: absolute;
-    left: 15px;
-    top:7px;
+a > i {
+  position: absolute;
+  left: 15px;
+  top: 7px;
 }
-input{
-    padding: 8px;
-    width: 400px;
-    border-radius: 15px;
-   
+input {
+  padding: 8px;
+  width: 400px;
+  border-radius: 15px;
 }
-.icone{
-    display: flex;
-    margin-left: 30px;
-    margin-top: 10px;
-   
-
-
+.icone {
+  display: flex;
+  margin-left: 30px;
+  margin-top: 10px;
 }
-.barre{
-    display: flex;
-   
+.barre {
+  display: flex;
 }
 .seConnecter {
-    margin-right: 10px;
-    text-decoration: none;
-    color: purple;
+  margin-right: 10px;
+  text-decoration: none;
+  color: purple;
 }
 
 .seConnecter:hover + .inscription {
-    display: inline;
+  display: inline;
 }
 
 .inscription {
-    display: none;
-    margin-top: 5px;  /* Espace entre les deux liens */
-    text-decoration: none;
-    color: purple;
+  display: none;
+  margin-top: 5px; /* Espace entre les deux liens */
+  text-decoration: none;
+  color: purple;
 }
-.icone i{
-    margin-top: 23px;
-    margin-left: 10px;
+.icone i {
+  margin-top: 23px;
+  margin-left: 10px;
 }
-a{
-    text-decoration: none;
-    font-weight: bolder;
-    color: purple;
-    font-size: 20px;
+a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: purple;
+  font-size: 20px;
 }
-.icone a{
-    margin-top: 20px;
+.icone a {
+  margin-top: 20px;
 }
-i{
-    font-size: 20px;
+i {
+  font-size: 20px;
 }
-li{
-    list-style-type: none;
-    padding: 20px;
-
+li {
+  list-style-type: none;
+  padding: 20px;
 }
-ul{
-    display: flex;
-    align-items: center;
-   
+ul {
+  display: flex;
+  align-items: center;
 }
-ul img{
-    width: 150px;
-    height: 100px;
+ul img {
+  width: 150px;
+  height: 100px;
 }
-li a{
-    font-size: 25px;
-
+li a {
+  font-size: 25px;
 }
 
-.maquillage img{
-    width: 254px;
-    height: 170px;
-    border-radius: 15px;
-    margin-left: 15px;
+.maquillage img {
+  width: 254px;
+  height: 170px;
+  border-radius: 15px;
+  margin-left: 15px;
 }
-.maquillage{
-    width: 300px;
-    height: 280px;
-    border: 2px solid rgb(103, 68, 107);
-    margin-left: 20px;
-    border-radius: 15px;
+.maquillage {
+  width: 300px;
+  height: 280px;
+  border: 2px solid rgb(103, 68, 107);
+  margin-left: 20px;
+  border-radius: 15px;
 }
-.maquillage h4{
-    margin-left: 18px;
-    margin-top: 13px;
+.maquillage h4 {
+  margin-left: 18px;
+  margin-top: 13px;
 }
-.bordure{
-    border: 1px solid black;
-    
+.bordure {
+  border: 1px solid black;
 }
-h3{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    color: crimson;
-     font-family: 'Dancing Script', cursive;
-     font-weight: bold;
-font-size: 40px;
+h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: crimson;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 40px;
 }
-.selection{
-    /* display: flex; */
-    justify-content: space-around;
+.selection {
+  /* display: flex; */
+  justify-content: space-around;
 }
-.clothes h2{
-    font-family: 'Dancing Script', cursive;
-    font-weight: bolder;
-    margin-top: 30px;
-    margin-right: 30px;
+.clothes h2 {
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+  margin-top: 30px;
+  margin-right: 30px;
 }
 
-.clothes{
-    display: flex;
-    
-    
-    align-items: center;
-    margin-top: 30px;
-}
-.block2{
-    margin-left: 0px;
-    color: rgb(135, 57, 135);
-    
-}
-.block1{
-    margin-left: 40px;
-    color: rgb(135, 57, 135);
-}
-.promo-bijoux{
-    display: flex;
-    justify-content: space-around   ;
-    align-items: center;
-    
-}
-.promo-bijoux h2{
-    margin-top: 20px;
-}
-.promo-bijoux h4{
-    width: 400px;
-    text-align: center;
-    margin-top: 20px;
-}
-.coffre1 img{
-    width: 350px;
-    height: 350px;
-    margin-top: 30px;
-    margin-left: 20px;
-}
-.coffre1{
-    position: relative;
-    margin-left: 15px
-}
-.promo1{
-    position: absolute;
-    left: 20px;
-    top: 0px;
-    background-color: darkmagenta;
-    width: 200px;
-    height: 35px;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    font-weight: bold;
+.clothes {
+  display: flex;
 
+  align-items: center;
+  margin-top: 30px;
 }
-.promo2{
-    position: absolute;
-    left: 20px;
-    top: 50px;
-    width: 70px;
-    height: 35px;
-    color: white;
-    padding: 5px;
-    background-color: darkmagenta;
-    text-align: center;
-    font-weight: bold;
+.block2 {
+  margin-left: 0px;
+  color: rgb(135, 57, 135);
 }
-.paragraphe{
-    margin-top: 30px;
+.block1 {
+  margin-left: 40px;
+  color: rgb(135, 57, 135);
+}
+.promo-bijoux {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.promo-bijoux h2 {
+  margin-top: 20px;
+}
+.promo-bijoux h4 {
+  width: 400px;
+  text-align: center;
+  margin-top: 20px;
+}
+.coffre1 img {
+  width: 350px;
+  height: 350px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.coffre1 {
+  position: relative;
+  margin-left: 15px;
+}
+.promo1 {
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  background-color: darkmagenta;
+  width: 200px;
+  height: 35px;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+.promo2 {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  width: 70px;
+  height: 35px;
+  color: white;
+  padding: 5px;
+  background-color: darkmagenta;
+  text-align: center;
+  font-weight: bold;
+}
+.paragraphe {
+  margin-top: 30px;
   text-align: center;
 }
-.coffre1 h4 , .coffre1 h5 {
-    margin-left: -10px;
+.coffre1 h4,
+.coffre1 h5 {
+  margin-left: -10px;
 }
-.coffre1 h2{
-    margin-left: 30px;
+.coffre1 h2 {
+  margin-left: 30px;
 }
-.coffre1 span{
-    margin-left: 30px;
+.coffre1 span {
+  margin-left: 30px;
 }
-.deuxiemecoffre{
-   text-align: center;
-   
+.deuxiemecoffre {
+  text-align: center;
 }
 
-.titre_page{
-    font-family: 'Dancing Script', cursive;
-    font-weight: bolder;
-    text-align: center;
-    background-color: rgb(239, 210, 215);
-    height: 70px;
+.titre_page {
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+  text-align: center;
+  background-color: rgb(239, 210, 215);
+  height: 70px;
 }
-section{
-    display: flex;
-     justify-content: space-around;
-     flex-wrap: wrap;
-  
-margin-left: 100px;
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
-
+  margin-left: 100px;
 }
 /* .container-vetements img{
     width: 300px;
     height: 300px;
 } */
-.container-vetements{
-    width: 500px;
+.container-vetements {
+  width: 500px;
 }
-.container-vetements h4{
-    width: 300px;
-}
-
-.sect2{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-}
-
-.block-vetements a {
-    color: rgb(184, 89, 104);
-    font-size: 25px;
-}
-.block-vetements button{
-    color: rgb(126, 41, 41);
-    padding: 5px;
-    margin-top: 10px;       
-}
-.container-maquillage h1{
-      font-family: 'Dancing Script', cursive;
-    font-weight: bolder;
-    text-align: center;
-    background-color: rgb(239, 210, 215);
-    height: 70px;
-}
-.container-maquillage img{
-     width: 300px;
-    height: 300px;
-}
-.invisible{
-    width: 500px;
-    height: 30px;
-}
-.voir_detail{
-    margin-top: 20px;
-    font-weight: bold;
-    color: rgb(59, 21, 94);
-    padding: 5px;
-}
-.listeMaquillage{
-    display: flex;
-   justify-content: space-around;
-
-}
-.listeMaquillage h4{
-    font-weight: bold;
-  
-}
-.montresAcceuil {
-    border: 3px solid purple;
-    border-radius: 15px;
-    width: 600px;
-    padding: 20px;
-    text-align: center;
-    margin-top: 30px;
-   
-}
-.montresAcceuil img{
-   width: 400px;
-   height: 400px;
-}
-.images_panier img{
-    width: 400px;
-    height: 400px;
-}
-.liste_panier{
-    display: flex;
- flex-wrap: wrap;
+.container-vetements h4 {
   width: 300px;
 }
 
-.block_detail h3{
-    width: 1800px;
-    color: black;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 25px;
-  
-}
-.block_detail h2{
-    color: blueviolet;
-    margin-left: 20px;
-    font-size: 30px;
-}
-.block_detail h4{
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    color: darkred;
-
-}
-.block_detail img{
- margin-left: 34%;
-}
-.couleur1{
-    color:rgb(166, 22, 166);
-   
-
+.sect2 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
+.block-vetements a {
+  color: rgb(184, 89, 104);
+  font-size: 25px;
+}
+.block-vetements button {
+  color: rgb(126, 41, 41);
+  padding: 5px;
+  margin-top: 10px;
+}
+.container-maquillage h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+  text-align: center;
+  background-color: rgb(239, 210, 215);
+  height: 70px;
+}
+.container-maquillage img {
+  width: 300px;
+  height: 300px;
+}
+.invisible {
+  width: 500px;
+  height: 30px;
+}
+.voir_detail {
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgb(59, 21, 94);
+  padding: 5px;
+}
+.listeMaquillage {
+  display: flex;
+  justify-content: space-around;
+}
+.listeMaquillage h4 {
+  font-weight: bold;
+}
+.montresAcceuil {
+  border: 3px solid purple;
+  border-radius: 15px;
+  width: 600px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+.montresAcceuil img {
+  width: 400px;
+  height: 400px;
+}
+.images_panier img {
+  width: 400px;
+  height: 400px;
+}
+.liste_panier {
+  display: flex;
+  flex-direction: column;
+}
+
+.block_detail h3 {
+  width: 1800px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+.block_detail h2 {
+  color: blueviolet;
+  margin-left: 20px;
+  font-size: 30px;
+}
+.block_detail h4 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: darkred;
+}
+.block_detail img {
+  margin-left: 34%;
+}
+.couleur1 {
+  color: rgb(166, 22, 166);
+}
+
+.expedition i {
+  color: blue;
+  font-size: 25px;
+}
+.expedition h4 {
+  margin-left: 30px;
+  font-size: 25px;
+  color: darkred;
+  text-align: center;
+}
+.livraison {
+  text-align: center;
+}
+
+.panierArticles {
+    display: flex;
+    flex-wrap: wrap;
+}
+ .custom-title {
+   cursor: pointer;
+   text-decoration: underline;
+   color: violet;
+  }
+
+ #hiddenText {
+   display: none;
+   margin-top: 10px;
+   font-weight: bold;
+   font-size: 30px;
+   width: 600px;
+margin: auto;  }
 

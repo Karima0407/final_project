@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 </html>
@@ -67,5 +69,19 @@ if (isset($_GET['id'])) {
     echo 'Erreur : ID du produit manquant dans l\'URL.';
 }
 
+?>
 
-
+<div class="livraison">
+    <h1>Expédition Rapide à France </h1>
+    <div class="expedition">
+        <h4> <i class="fa-solid fa-truck"></i> Livraison standard gratuite dès 49€ d'achat </h4>
+    </div>
+    <h1 class="custom-title" onclick="toggleText()">Politique de Retour</h1>
+    <div id="hiddenText">
+        <p>Les retours peuvent être effectués pendant 45 jours après la date d’achat.
+        </p>
+        <p> Politique de retour :</p>
+        <p> 1. Les articles doivent être renvoyés dans les 45 jours après la date d’achat. <br>
+            2. Les articles doivent être renvoyés dans leur emballage d’origine et en parfait état.</p>
+    </div>
+</div>

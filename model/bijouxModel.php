@@ -41,4 +41,20 @@ class Bijoux
             echo $e->getMessage();
         }
     }
+
+    public static function getProductDetails($product_id)
+    {
+        $db = Database::dbConnect();
+        $request = $db->prepare("SELECT * FROM bijoux  WHERE id_bijoux = ?");
+
+        try {
+            $request->execute([$product_id]);
+            $productDetails = $request->fetch();
+
+            return $productDetails;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return false;
+        }
+    }
 }

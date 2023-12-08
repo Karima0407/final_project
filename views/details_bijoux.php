@@ -10,7 +10,7 @@
 </head>
 <?php
 session_start();
-require_once "../model/maquillageModel.php";
+require_once "../model/bijouxModel.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . '/projet_final/function/database.php';
 //  pour les details de maquillage:
 
@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
     $product_id = $_GET['id'];
 
     // Appeler la méthode pour récupérer les détails du produit
-    $productDetails = Maquillage::getProductDetails($product_id);
+    $productDetails = Bijoux::getProductDetails($product_id);
 
 
 
@@ -27,7 +27,7 @@ if (isset($_GET['id'])) {
     if ($productDetails) {
         // Afficher les détails du produit
         echo '<div class="block_detail">';
-        echo '<img src="./assets/img/' . $productDetails['imageMakeup'] . '" alt="" width="600" height="500">';
+        echo '<img src="./assets/img/' . $productDetails['imageBijoux'] . '" alt="" width="600" height="500">';
         echo '<h4>' . $productDetails['description'] . '</h4>';
         $description = str_replace('S Buste', '<span class="couleur1">S Buste</span>', $productDetails['descriptionDetaille']);
 

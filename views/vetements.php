@@ -234,6 +234,10 @@ $listVetements = Vetement::listVetement();
 </div> -->
 
 <h1 class="titre_page">Chez Nous vous trouvez un large choix de vetements pour un look exellent et attirant! </h1>
+<div class="recherche">
+  <input type="text" id="searchInput" placeholder="Tapez votre produit">
+  <div id="searchResults"></div>
+</div>
 <section>
 
 
@@ -250,7 +254,7 @@ $listVetements = Vetement::listVetement();
         <div><img src="./assets/img/<?= $vetement['image']; ?>" name="product_img" alt="" width="300" height="300"></div>
 
         <h4><?= $vetement['description']; ?></h4>
-   
+
 
         <div>
           <button type="submit" name="add_to_cart">Ajouter au Panier</button>
@@ -262,3 +266,4 @@ $listVetements = Vetement::listVetement();
     </div>
   <?php } ?>
 </section>
+<script src="./assets/index.js"></script>
