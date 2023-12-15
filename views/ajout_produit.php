@@ -13,11 +13,17 @@
         <div> <input type="file" name="img" id=""></div>
         <label for="">Ajoutez une description</label>
         <div><input type="text" name="description-produit" id=""></div>
-        <label for="">Ajoutez une description détaillée du produit</label>
-        <div><textarea name="description-detaille" id="" cols="30" rows="10"></textarea></div>
+        <label for="">Ajoutez la taille du produit</label>
+        <div><input type="number" name="taille" id=""></div>
+        <label for="">Ajoutez la couleur du produit </label>
+        <div><input type="text" name="couleur" id=""></div>
+        <label for="">Ajoutez les conseils d'entretien pour le produit</label>
+        <div><textarea name="conseils_entretien" id="" cols="30" rows="10"></textarea></div>
         <label for="">Ajoutez le prix</label>
         <div><input type="number" name="prix" id=""></div>
-        <button name="ajout-vetement">Ajoutez nouveau vetement</button>
+
+
+        <button name="ajout-produit">Ajoutez nouveau produit</button>
 
     </form>
 </body>

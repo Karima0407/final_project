@@ -31,38 +31,84 @@ $listMakeup = Maquillage::listMaquillage();
     <section>
 
 
-        <?php foreach ($listMakeup as $makeup) { ?>
+        <div>
+            <h2>Mascara</h2>
+            <?php foreach ($listMakeup as $makeup) { ?>
+                <?php if (str_contains($makeup['description'], 'Mascara')) { ?>
+                    <div class="container-vetements">
+                        <div class="invisible"></div>
+                        <form action="./panier.php" method="post">
+                            <input type="hidden" name="product_id" value="<?= $makeup['id_maquillage']; ?>">
+                            <input type="hidden" name="product_img" value="<?= $makeup['imageMakeup']; ?>">
+                            <input type="hidden" name="product_description" value="<?= $makeup['description']; ?>">
+                            <input type="hidden" name="product_prix" value="<?= $makeup['prix']; ?>">
 
-            <div class="container-vetements">
-                <div class="invisible"></div>
-                <form action="./panier.php" method="post">
-                    <input type="hidden" name="product_id" value="<?= $makeup['id_maquillage']; ?>">
-                    <input type="hidden" name="product_img" value="<?= $makeup['imageMakeup']; ?>">
-                    <input type="hidden" name="product_description" value="<?= $makeup['description']; ?>">
-                    <input type="hidden" name="product_prix" value="<?= $makeup['prix']; ?>">
+                            <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
 
-                    <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
+                            <h4><?= $makeup['description']; ?></h4>
 
-                    <h4><?= $makeup['description']; ?></h4>
-
-                    <div>
-                        <button type="submit" name="add_to_cart">Ajouter au Panier</button>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                            <div>
+                                <button type="submit" name="add_to_cart">Ajouter au Panier</button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </form>
+                        <a href="details_maquillage.php?id=<?= $makeup['id_maquillage']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
                     </div>
-                </form>
+            <?php }
+            } ?>
+        </div>
+        <div>
+            <h2>Rouge à Levres</h2>
+            <?php foreach ($listMakeup as $makeup) {
+                if (str_contains($makeup['description'], 'Rouge')) { ?>
+                    <div class="container-vetements">
+                        <div class="invisible"></div>
+                        <form action="./panier.php" method="post">
+                            <input type="hidden" name="product_id" value="<?= $makeup['id_maquillage']; ?>">
+                            <input type="hidden" name="product_img" value="<?= $makeup['imageMakeup']; ?>">
+                            <input type="hidden" name="product_description" value="<?= $makeup['description']; ?>">
+                            <input type="hidden" name="product_prix" value="<?= $makeup['prix']; ?>">
 
+                            <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
 
-                <a href="details_maquillage.php?id=<?= $makeup['id_maquillage']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
+                            <h4><?= $makeup['description']; ?></h4>
 
+                            <div>
+                                <button type="submit" name="add_to_cart">Ajouter au Panier</button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </form>
+                        <a href="details_maquillage.php?id=<?= $makeup['id_maquillage']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
+                    </div>
+            <?php }
+            } ?>
+        </div>
+        <div>
+            <h2>Fond de Teint</h2>
+            <?php foreach ($listMakeup as $makeup) {
+                if (str_contains($makeup['description'], 'Fond')) { ?>
+                    <div class="container-vetements">
+                        <div class="invisible"></div>
+                        <form action="./panier.php" method="post">
+                            <input type="hidden" name="product_id" value="<?= $makeup['id_maquillage']; ?>">
+                            <input type="hidden" name="product_img" value="<?= $makeup['imageMakeup']; ?>">
+                            <input type="hidden" name="product_description" value="<?= $makeup['description']; ?>">
+                            <input type="hidden" name="product_prix" value="<?= $makeup['prix']; ?>">
 
+                            <div><img src="./assets/img/<?= $makeup['imageMakeup']; ?>" alt="" width="300" height="300"></div>
 
+                            <h4><?= $makeup['description']; ?></h4>
 
-            </div>
-
-
-
-
-        <?php } ?>
+                            <div>
+                                <button type="submit" name="add_to_cart">Ajouter au Panier</button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </form>
+                        <a href="details_maquillage.php?id=<?= $makeup['id_maquillage']; ?>" class="voir_detail">Voir Plus de détails sur ce produit</a>
+                    </div>
+            <?php }
+            } ?>
+        </div>
     </section>
     <script src="./assets/index.js"></script>
 </body>

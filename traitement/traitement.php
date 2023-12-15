@@ -1,6 +1,7 @@
 <?php
 
 require_once "../model/userModel.php";
+require_once "../model/categoryModel.php";
 require_once "../model/vetementModel.php";
 require_once "../model/maquillageModel.php";
 
@@ -36,11 +37,15 @@ if (isset($_POST['login'])) {
 
     User::connexion($email, $password);
 }
+// pour l'ajout du produit
 
-if (isset($_POST['ajout-vetement'])) {
+if (isset($_POST['ajout-produit'])) {
     $description_produit = htmlspecialchars($_POST['description-produit']);
-    $description_detaille = htmlspecialchars($_POST['description-detaille']);
+    $taille = htmlspecialchars($_POST['taille']);
+    $couleur = htmlspecialchars($_POST['couleur']);
+    $conseils_entretien = htmlspecialchars($_POST['conseils_entretien']);
     $prix = htmlspecialchars($_POST['prix']);
+    
 
 
 
@@ -53,10 +58,10 @@ if (isset($_POST['ajout-vetement'])) {
         // se connecter à la base de donnes
         $db = Database::dbConnect();
         //preparer la requete
-        $request = $db->prepare('INSERT INTO vetements (image ,description,descriptionDetaille,prix) VALUES (?,?,?,?)');
+        $request = $db->prepare('INSERT INTO produit (image_produit ,description,conseil_entretien,prix,taille,couleur) VALUES (?,?,?,?,?,?)');
         //exzcuter la requete
         try {
-            $request->execute(array($imgName, $description_produit, $description_detaille, $prix));
+            $request->execute(array($imgName, $description_produit, $conseils_entretien, $prix ,$taille,$couleur));
             // redirction vers list_room.php
         } catch (PDOException $e) {
             echo $e->getMessage();
@@ -64,72 +69,79 @@ if (isset($_POST['ajout-vetement'])) {
     }
 }
 
-if (isset($_POST['ajout-maquillage'])) {
-    $description_maquillage = htmlspecialchars($_POST['description-maquillage']);
+// pour l'ajout de la categorie
 
-
-    $imgName = $_FILES['img_makeup']['name'];
-    $tmpName = $_FILES['img_makeup']['tmp_name'];
-    $destination = $_SERVER["DOCUMENT_ROOT"] . '/final_project/views/assets/img/' . $imgName;
-
-    if (move_uploaded_file($tmpName, $destination)) {
-        // se connecter à la base de donnes
-        $db = Database::dbConnect();
-        //preparer la requete
-        $request = $db->prepare('INSERT INTO maquillage (imageMakeup ,description) VALUES (?,?)');
-        //exzcuter la requete
-        try {
-            $request->execute(array($imgName, $description_maquillage));
-            // redirction vers list_room.php
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-    }
+if (isset($_POST['ajout-category'])) {
+    $category = htmlspecialchars($_POST['category']);
+    Category::Ajout($category);
 }
 
-if (isset($_POST['ajout-bijoux'])) {
-    $description_bijoux = htmlspecialchars($_POST['description-bijoux']);
-    $prix_bijoux = htmlspecialchars($_POST['prix']);
+// if (isset($_POST['ajout-maquillage'])) {
+//     $description_maquillage = htmlspecialchars($_POST['description-maquillage']);
 
 
-    $imgName = $_FILES['img_bijoux']['name'];
-    $tmpName = $_FILES['img_bijoux']['tmp_name'];
-    $destination = $_SERVER["DOCUMENT_ROOT"] . '/final_project/views/assets/img/' . $imgName;
+//     $imgName = $_FILES['img_makeup']['name'];
+//     $tmpName = $_FILES['img_makeup']['tmp_name'];
+//     $destination = $_SERVER["DOCUMENT_ROOT"] . '/final_project/views/assets/img/' . $imgName;
 
-    if (move_uploaded_file($tmpName, $destination)) {
-        // se connecter à la base de donnes
-        $db = Database::dbConnect();
-        //preparer la requete
-        $request = $db->prepare('INSERT INTO bijoux (imageBijoux ,description,prix) VALUES (?,?,?)');
-        //exzcuter la requete
-        try {
-            $request->execute(array($imgName, $description_bijoux, $prix_bijoux));
-            // redirction vers list_room.php
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-    }
-}
+//     if (move_uploaded_file($tmpName, $destination)) {
+//         // se connecter à la base de donnes
+//         $db = Database::dbConnect();
+//         //preparer la requete
+//         $request = $db->prepare('INSERT INTO maquillage (imageMakeup ,description) VALUES (?,?)');
+//         //exzcuter la requete
+//         try {
+//             $request->execute(array($imgName, $description_maquillage));
+//             // redirction vers list_room.php
+//         } catch (PDOException $e) {
+//             echo $e->getMessage();
+//         }
+//     }
+// }
 
-if (isset($_POST['ajout-montre'])) {
-    $description_montres = htmlspecialchars($_POST['description-montres']);
+// if (isset($_POST['ajout-bijoux'])) {
+//     $description_bijoux = htmlspecialchars($_POST['description-bijoux']);
+//     $prix_bijoux = htmlspecialchars($_POST['prix']);
 
 
-    $imgName = $_FILES['img_montres']['name'];
-    $tmpName = $_FILES['img_montres']['tmp_name'];
-    $destination = $_SERVER["DOCUMENT_ROOT"] . '/final_project/views/assets/img/' . $imgName;
+//     $imgName = $_FILES['img_bijoux']['name'];
+//     $tmpName = $_FILES['img_bijoux']['tmp_name'];
+//     $destination = $_SERVER["DOCUMENT_ROOT"] . '/final_project/views/assets/img/' . $imgName;
 
-    if (move_uploaded_file($tmpName, $destination)) {
-        // se connecter à la base de donnes
-        $db = Database::dbConnect();
-        //preparer la requete
-        $request = $db->prepare('INSERT INTO montres (imageMontres ,description) VALUES (?,?)');
-        //exzcuter la requete
-        try {
-            $request->execute(array($imgName, $description_montres));
-            // redirction vers list_room.php
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-    }
-}
+//     if (move_uploaded_file($tmpName, $destination)) {
+//         // se connecter à la base de donnes
+//         $db = Database::dbConnect();
+//         //preparer la requete
+//         $request = $db->prepare('INSERT INTO bijoux (imageBijoux ,description,prix) VALUES (?,?,?)');
+//         //exzcuter la requete
+//         try {
+//             $request->execute(array($imgName, $description_bijoux, $prix_bijoux));
+//             // redirction vers list_room.php
+//         } catch (PDOException $e) {
+//             echo $e->getMessage();
+//         }
+//     }
+// }
+
+// if (isset($_POST['ajout-montre'])) {
+//     $description_montres = htmlspecialchars($_POST['description-montres']);
+
+
+//     $imgName = $_FILES['img_montres']['name'];
+//     $tmpName = $_FILES['img_montres']['tmp_name'];
+//     $destination = $_SERVER["DOCUMENT_ROOT"] . '/final_project/views/assets/img/' . $imgName;
+
+//     if (move_uploaded_file($tmpName, $destination)) {
+//         // se connecter à la base de donnes
+//         $db = Database::dbConnect();
+//         //preparer la requete
+//         $request = $db->prepare('INSERT INTO montres (imageMontres ,description) VALUES (?,?)');
+//         //exzcuter la requete
+//         try {
+//             $request->execute(array($imgName, $description_montres));
+//             // redirction vers list_room.php
+//         } catch (PDOException $e) {
+//             echo $e->getMessage();
+//         }
+//     }
+// }

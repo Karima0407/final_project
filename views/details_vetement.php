@@ -53,7 +53,11 @@ if (isset($_GET['id'])) {
         $description = str_replace(' Conseils d\'entretien ', '<span class="couleur1">Conseils d\'entretien </span>', $description);
         $description = str_replace(' Col ', '<span class="couleur1"> Col </span>', $description);
 
+        $tags = ["Longueur", "Épaule"];
+        foreach($tags as $tag){
+            str_replace('Longueur', '<span class="couleur1">Longueur</span>', $tag);
 
+        }
 
 
         // echo '<h3>' . $productDetails['descriptionDetaille'] . '</h3>';

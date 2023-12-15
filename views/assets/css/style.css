@@ -122,9 +122,15 @@ h3 {
 
 .clothes {
   display: flex;
-
   align-items: center;
   margin-top: 30px;
+  justify-content: space-evenly;
+}
+.clothes > h2, .clothes > div {
+  width:30%;
+}
+.clothes img {
+  width:100%;
 }
 .block2 {
   margin-left: 0px;

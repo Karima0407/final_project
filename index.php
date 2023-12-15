@@ -114,18 +114,18 @@ $listMontres2 = Montres::listMontresAccueil2($imageMontresIds2);
             </div>
 
             <div class="clothes">
-                <h2 class="block1">Une vaste collection de vetements pour une élégance <br> magnifique et une beauté <br> impréssionnante <br> </h2>
+                <h2 class="block1">Une vaste collection de vetements pour une élégance magnifique et une beauté impréssionnante </h2>
 
                 <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
                     <div class="carousel-inner  ">
                         <div class="carousel-item active">
-                            <img src="./views/assets/img/tenue.jpeg" class=" w-60  '" alt="...">
+                            <img src="./views/assets/img/tenue.jpeg"  alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./views/assets/img/tenue.jpeg" class=" w-60  " alt="...">
+                            <img src="./views/assets/img/tenue.jpeg"  alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./views/assets/img/ab531cf96f9489a4434d2daee2f3df63.jpg" class=" w-60 " alt="...">
+                            <img src="./views/assets/img/ab531cf96f9489a4434d2daee2f3df63.jpg" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -138,7 +138,7 @@ $listMontres2 = Montres::listMontresAccueil2($imageMontresIds2);
                     </button>
                 </div>
 
-                <h2 class="block2">Des différentes choix <br> et styles pour toutes les gouts et toutes <br> les envies !</h2>
+                <h2 class="block2">Des différentes choix et styles pour toutes les gouts et toutes les envies !</h2>
             </div>
 
             <h3>Nos Promotions de Coffrets Bijoux </h3>
